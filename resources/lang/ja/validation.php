@@ -116,6 +116,11 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => '名前',
+        'email' => 'メールアドレス',
+        'password' => 'パスワード',
+        'self_introduction' => '自己紹介文'
+    ],
 
 ];
