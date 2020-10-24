@@ -120,6 +120,7 @@ return [
         'name' => '名前',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
+        'img_name' => '画像',
         'self_introduction' => '自己紹介文'
     ],
 

@@ -6,14 +6,14 @@
     <div class='container'>
         <header class="header">
             <p class='header_logo'>
-            <a href="{{ route('home') }}">
-                <img src="/storage/images/techpit-match-icon.png">
-            </a>
+                <a href="{{ route('home') }}">
+                    <img src="/storage/images/techpit-match-icon.png">
+                </a>
             </p>
         </header>
         <div class='userInfo'>
             <div class='userInfo_img'>
-            <img src="/storage/images/{{$user -> img_name}}">
+                <img src="/storage/images/{{$user -> img_name}}">
             </div>
             <div class='userInfo_name'>{{ $user -> name }}</div>
             <div class='userInfo_selfIntroduction'>{{ $user -> self_introduction }}</div>

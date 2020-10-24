@@ -11,6 +11,13 @@ use App\User;
 
 class UserController extends Controller
 {
+
+    /**
+     * プロフィール画面表示
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function show($id) {
 
         $user = User::findorFail($id);
@@ -18,6 +25,12 @@ class UserController extends Controller
         return view('users.show', compact('user'));
     }
 
+    /**
+     * プロフィール編集画面表示
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function edit($id)
     {
         $user = User::findorFail($id);
@@ -25,6 +38,13 @@ class UserController extends Controller
         return view('users.edit', compact('user'));
     }
 
+    /**
+     * プロフィール更新
+     *
+     * @param Request $request
+     * @param [type] $id
+     * @return void
+     */
     public function update(Request $request, $id)
     {
         $user = User::findorFail($id);

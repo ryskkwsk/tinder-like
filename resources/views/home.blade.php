@@ -11,14 +11,17 @@
             <li class="appIcon">
                 <a href="{{route('home')}}"><img src="/storage/images/techpit-match-icon.png"></a>
             </li>
+            <li class="messageIcon">
+                <a href="{{route('matching')}}"><i class="fas fa-2x fa-comments"></a></i>
+            </li>
         </ul>
     </nav>
     <div id="tinderslide">
         <ul>
-            @foreach($users as $user)
-            <li data-user_id="{{ $user->id }}">
-                <div class="userName">{{ $user->name }}</div>
-                <img src="/storage/images/{{ $user->img_name}}">
+            @foreach($except_own_users->user as $user)
+            <li data-user_id="{{ $user['id'] }}">
+                <div class="userName">{{ $user['name'] }}</div>
+                <img src="/storage/images/{{ $user['img_name']}}">
                 <div class="like"></div>
                 <div class="dislike"></div>
             </li>
@@ -31,5 +34,10 @@
         <a href="#" class="like"><i class="fas fa-heart fa-2x"></i></a>
     </div>
 </div>
+
+<script>
+    var usersNum = {{ $userCount }};
+    var from_user_id = {{ $from_user_id }};
+</script>
 
 @endsection
